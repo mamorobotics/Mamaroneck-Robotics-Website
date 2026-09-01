@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mamaroneck Robotics // Team 8490</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="images/TIGERLOGO.png">
+</head>
+
+<body>
+
+  <header>
+    <div class="wrap navbar">
+      <div class="brand"><span class="brand-dot"></span>MAMARONECK ROBOTICS</div>
+      <nav class="desktop-nav" id="desktopNav">
+        <a data-page="home" class="active">Dashboard</a>
+        <a data-page="ftc">FTC Program</a>
+        <a data-page="rov">MATE ROV</a>
+        <a data-page="gallery">Gallery</a>
+        <a data-page="contact">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" title="Toggle theme">Dark</button>
+        <button class="hamburger" id="hamburgerBtn" title="Menu">
+          <span class="hamburger-lines"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a data-page="home" class="active">Dashboard</a>
+      <a data-page="ftc">FTC Program</a>
+      <a data-page="rov">MATE ROV</a>
+      <a data-page="gallery">Gallery</a>
+      <a data-page="contact">Contact</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- HOME -->
+    <section class="page active" id="page-home">
+      <div class="hero">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow"><span class="status-dot"></span>MAMARONECK HIGH SCHOOL // ROBOTICS</div>
+            <h1>MAMARONECK ROBOTICS</h1>
+            <p class="lead">Engineering precision. Building future leaders. Mamaroneck Robotics fields elite competitive
+              teams in multiple engineering disciplines, focusing on robust mechanical design, advanced control systems,
+              and comprehensive technical documentation.</p>
+            <div class="btn-row">
+              <a class="btn btn-primary" data-page="ftc">FTC 8490</a>
+              <a class="btn btn-secondary" data-page="rov">MATE ROV Tigersharks</a>
+            </div>
+            <div class="hero-meta">SYS.STATUS: ONLINE · LAT: 40°56'30.5" N · LON: 73°44'40.2" W</div>
+          </div>
+          <div>
+            <img src="images/TIGERLOGO.png" alt="Mamaroneck Robotics Logo"
+              style="max-width:280px; height:auto; margin-left:60px;">
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="eyebrow">DIV.01 // PROGRAM OVERVIEW</div>
+        <h2 class="reveal">ONE PROGRAM. TWO COMPETITIONS.</h2>
+        <div class="grid-2" style="margin-top:24px;">
+          <div class="card reveal">
+            <span class="tag">LAND</span>
+            <h3>First Tech Challenge</h3>
+            <p>Team 8490 conceptualizes, CADs, fabricates, and programs 18"×18" aluminum-chassis robots for intense 2v2
+              arena matches.</p>
+            <a class="btn-ghost" data-page="ftc">Access specs →</a>
+          </div>
+          <div class="card reveal">
+            <span class="tag">WATER</span>
+            <h3>MATE ROV Competition</h3>
+            <p>The Tigersharks engineer advanced underwater remotely operated vehicles (ROVs) to complete complex
+              simulated marine industrial tasks.</p>
+            <a class="btn-ghost" data-page="rov">Access specs →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BUILT BY STUDENTS + THE PROCESS on the left, tall team photo on the right -->
+      <div class="section" style="border-bottom:none;">
+        <div class="team-process-grid">
+          <div class="team-process-col">
+            <div class="reveal">
+              <div class="eyebrow">DIV.02 // THE TEAM</div>
+              <h2>BUILT BY STUDENTS.</h2>
+              <p class="lead" style="margin-bottom:0;">Mamaroneck Robotics is entirely student-led. From ideas to fully
+                functional
+                autonomous robots, every component is designed, manufactured, iterated, and coded by high school
+                students.
+                We work together to problem solve and deliver competition-ready robots on strict deadlines</p>
+            </div>
+
+            <div class="reveal" style="margin-top:40px;">
+              <div class="eyebrow">DIV.03 // METHODOLOGY</div>
+              <h2>THE PROCESS</h2>
+            </div>
+            <div class="process-stack">
+              <div class="process-card reveal">
+                <div class="process-num">01</div>
+                <h3>Design</h3>
+                <p style="color:var(--text-mid);font-size:14px;">Iterative CAD modeling using industry-standard
+                  software (Autodesk Fusion). Comprehensive prototyping and structural analysis before anything is
+                  manufactured.</p>
+              </div>
+              <div class="process-card reveal">
+                <div class="process-num">02</div>
+                <h3>Build</h3>
+                <p style="color:var(--text-mid);font-size:14px;">Precision fabrication utilizing CNC routing, 3D
+                  printing, and lasercutting.</p>
+              </div>
+              <div class="process-card reveal">
+                <div class="process-num">03</div>
+                <h3>Coding</h3>
+                <p style="color:var(--text-mid);font-size:14px;">Iterative software devolpment utilizing structured
+                  programming and testing.
+                  Building reliable autonomus routines through modular code, debugging, simulation, and continuous
+                  refinement.
+                </p>
+              </div>
+            </div>
+          </div><!-- closes team-process-col -->
+
+          <div class="photo-box-tall reveal">
+            <img src="images/TEAMPHOTO.png" alt="Mamaroneck Robotics team at MHS Engineering Lab">
+          </div>
+        </div><!-- closes team-process-grid -->
+      </div><!-- closes section -->
+    </section>
+
+    <!-- FTC PROGRAM -->
+    <section class="page" id="page-ftc">
+      <div class="program-header">
+        <div class="eyebrow">[SYSTEM.INIT] // COMPETITION_TIER: FIRST_TECH_CHALLENGE</div>
+        <h1 style="font-size:40px;">FTC 8490</h1>
+        <p class="lead">Engineering, programming, and operating precision robotic systems for the FIRST Tech Challenge.
+          Our methodology prioritizes robust mechanical design, elegant software architecture, and comprehensive
+          technical documentation.</p>
+      </div>
+
+      <div class="season-block">
+        <div class="eyebrow">SEASON_02 (2025-2026)</div>
+        <div class="season-header">
+          <h2 style="margin-bottom:0;">FTC // DECODE</h2>
+          <div class="badge-row">
+            <span class="badge">YEAR 2025-2026</span>
+            <span class="badge status">STATUS: COMPLETE</span>
+          </div>
+        </div>
+        <div class="season-grid">
+          <div>
+            <div class="render-pair">
+              <div class="render-box reveal">
+                <img src="images/FTC2526.PNG" alt="FTC 2025-2026 Robot">
+              </div>
+              <div class="render-box reveal">
+                <img src="images/FTC2526POSTER.png" alt="FTC 2025-2026 Season Poster">
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="specs-panel reveal">
+              <h4>SYS_SPECS // 2025-2026</h4>
+              <div class="spec-row">
+                <div class="spec-label">Design Goals</div>
+                <div class="spec-val">An evolving, unique robot design focused on efficient iteration, reliable
+                  mechanisms, and maximizing performance within a compact layout. We heavily utilized 3D printing for
+                  rapid prototyping and custom, application-specific parts, allowing us to quickly iterate and create
+                  designs tailored specifically to our robot.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Drivetrain</div>
+                <div class="spec-val">GoBilda Strafer chassis as our base, with 96mm mecanum wheels and 5203 planetary
+                  gear series Yellow Jacket motors using a 19.2:1 gear ratio and 312 RPM..</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Mechanisms</div>
+                <div class="spec-val">Dual flywheel launcher for reliable and consistent scoring. Rubber-band intake and
+                  transfer system with geared servos, plus a servo-operated gate and adjustable ramp for controlled
+                  artifact handling and shooting at multiple distances.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Software</div>
+                <div class="spec-val">Java-based control using Android Studio, with custom drivetrain and mechanism
+                  classes. Automated controls reduce driver workload, while Road Runner, PID loops, motor encoders, and
+                  the IMU provide precise autonomous movement.</div>
+              </div>
+              <div class="spec-actions">
+                <a class="btn btn-secondary" href="https://github.com/mamorobotics/MHS-FTC-25-26" target="_blank"
+                  rel="noopener noreferrer">Access GitHub repo</a>
+                <a class="btn btn-secondary" href="files/MamaroneckRoboticsTechReport202526.pdf" download
+                  target="_blank" rel="noopener noreferrer">Download tech
+                  report</a>
+              </div>
+            </div>
+            <div class="recognition reveal">
+              <div class="spec-label" style="width:100%;margin-bottom:6px;">[Peekskill Qualifier]</div>
+              <span>2nd Place Innovate Award</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="season-block" style="border-bottom:none;">
+        <div class="eyebrow">SEASON_01 (2024-2025)</div>
+        <div class="season-header">
+          <h2 style="margin-bottom:0;">FTC // INTO THE DEEP</h2>
+          <div class="badge-row">
+            <span class="badge">YEAR 2024-2025</span>
+            <span class="badge status">STATUS: COMPLETE</span>
+          </div>
+        </div>
+        <div class="season-grid">
+          <div>
+            <div class="render-pair">
+              <div class="render-box reveal">
+                <img src="images/FTC2425.PNG" alt="FTC 2024-2025 Robot">
+              </div>
+              <div class="render-box reveal">
+                <img src="images/FTC2425POSTER.png" alt="FTC 2024-2025 Season Poster">
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="specs-panel reveal">
+              <h4>SYS_SPECS // 2024-2025</h4>
+              <div class="spec-row">
+                <div class="spec-label">Design Goals</div>
+                <div class="spec-val">A simpler, more consistent robot focused on efficiency rather than flashy or
+                  highly specific attachments. We prioritized designs that were efficient and feasible within our
+                  constraints, using an iterative process of brainstorming, comparison, prototyping, and refinement.
+                </div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Drivetrain</div>
+                <div class="spec-val">GoBilda U-Channel chassis with 96mm mecanum wheels and 5203 planetary gear series
+                  Yellow Jacket motors. The motors use a 19.2:1 gear ratio and run at 312 RPM, while the chassis layout
+                  was optimized to maximize space for the linear slides and arm.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Mechanisms</div>
+                <div class="spec-val">A robotic arm with dual-axis linear slides and a parallel claw designed to handle
+                  blocks in a variety of orientations. We also developed a bar-lift mechanism using a linear slide and
+                  C-channel, allowing the robot to lift and hang from the bar.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Software</div>
+                <div class="spec-val">Java-based software developed in Android Studio with a focus on ease of operation
+                  and versatility. TeleOp included semi-autonomous positioning for intaking, scoring buckets, and
+                  placing specimens, while Road Runner, PID loops, motor encoders, and an IMU were used for precise
+                  autonomous movement.</div>
+              </div>
+              <div class="spec-actions">
+                <a class="btn btn-secondary" href="https://github.com/mamorobotics/MHS-FTC-24-25" target="_blank"
+                  rel="noopener noreferrer">Access GitHub repo</a>
+                <a class="btn btn-secondary" href="files/MamaroneckRoboticsTechReport202425.pdf" download
+                  target="_blank" rel="noopener noreferrer">Download tech
+                  report</a>
+              </div>
+            </div>
+            <div class="recognition reveal">
+              <div class="spec-label" style="width:100%;margin-bottom:6px;">[Peekskill Qualifier</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MATE ROV -->
+    <section class="page" id="page-rov">
+      <div class="program-header">
+        <div class="eyebrow">[SYSTEM.INIT] // COMPETITION_TIER: MATE_ROV</div>
+        <h1 style="font-size:40px;">TIGERSHARKS ROV</h1>
+        <p class="lead">The Tigersharks design, build, and pilot remotely operated vehicles (ROVs) to complete simulated
+          underwater marine industrial missions, emphasizing waterproof electronics, buoyancy control, and live
+          telemetry.</p>
+      </div>
+
+      <div class="season-block">
+        <div class="eyebrow">SEASON_02 (2025-2026)</div>
+        <div class="season-header">
+          <h2 style="margin-bottom:0;">MATE ROV</h2>
+          <div class="badge-row">
+            <span class="badge">YEAR 2025-2026</span>
+            <span class="badge status">STATUS: COMPLETE</span>
+          </div>
+        </div>
+        <div class="season-grid">
+          <div>
+            <div class="render-pair">
+              <div class="render-box reveal">
+                <img src="images/ROV2526.PNG" alt="ROV 2025-2026 Robot">
+              </div>
+              <div class="render-box reveal">
+                <img src="images/ROV2526POSTER.png" alt="ROV 2025-2026 Season Poster">
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="specs-panel reveal">
+              <h4>SYS_SPECS // 2025-2026</h4>
+              <div class="spec-row">
+                <div class="spec-label">Design Goals</div>
+                <div class="spec-val">A maneuverable and relatively inexpensive ROV designed to maximize task
+                  completion. Our main focus was improving reliability, usability, and efficiency through rapid
+                  prototyping and iterative design while also adding on to previous designs.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Propulsion</div>
+                <div class="spec-val">Four Blue Robotics T200 thrusters arranged with two facing upward and two facing
+                  forward. This layout was selected for stability, flexibility, balance, and ease of control. The ROV
+                  was designed to be slightly positively buoyant so it would return to the surface in the event of an
+                  onboard failure.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Attachments</div>
+                <div class="spec-val">A robust, 3D-printed interlocking claw designed to grasp PVC piping and loops of
+                  wire or plastic. Double helical gears reduce backlash and gear slippage, while two servos and a 2:1
+                  gear ratio increase gripping torque. We also developed a versatile recoverable line subsystem, with
+                  the majority of its components 3D printed.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Electronics</div>
+                <div class="spec-val">A compact acrylic electronics enclosure houses a Raspberry Pi, Arduino, two
+                  cameras, ESCs, and buck converters. The system uses watertight penetrators, parallel power conductors
+                  to reduce voltage drop, and a strain-relief hub to protect the tether and electrical connections.
+                </div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Software</div>
+                <div class="spec-val">A modular digital control system using Raspberry Pi, Arduino, and Python.
+                  Ventgarden serves as the central control system on the ground station, while camera transmission and
+                  PWM control are separated to improve reliability and flexibility. RS-485 is used for communication
+                  between the control station and ROV, and the system reduced camera latency from approximately 280 ms
+                  to 90 ms while supporting two camera feeds.</div>
+              </div>
+              <div class="spec-actions">
+                <a class="btn btn-secondary" href="https://github.com/mamorobotics/Ventgarden" target="_blank"
+                  rel="noopener noreferrer">Access GitHub repo</a>
+                <a class="btn btn-secondary" href="files/MamaroneckTigerSharksTechReport202526.pdf" download
+                  target="_blank" rel="noopener noreferrer">Download tech
+                  report</a>
+              </div>
+            </div>
+            <div class="recognition reveal">
+              <div class="spec-label" style="width:100%;margin-bottom:6px;">[Pennsylvania Regional]</div>
+              <span>2nd Place Overall</span>
+              <span>Best Technical Documentation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="season-block" style="border-bottom:none;">
+        <div class="eyebrow">SEASON_01 (2024-2025)</div>
+        <div class="season-header">
+          <h2 style="margin-bottom:0;">MATE ROV</h2>
+          <div class="badge-row">
+            <span class="badge">YEAR 2024-2025</span>
+            <span class="badge status">STATUS: COMPLETE</span>
+          </div>
+        </div>
+        <div class="season-grid">
+          <div>
+            <div class="render-pair">
+              <div class="render-box reveal">
+                <img src="images/ROV2425.PNG" alt="ROV 2024-2025 Robot">
+              </div>
+              <div class="render-box reveal">
+                <img src="images/ROV2425POSTER.png" alt="ROV 2024-2025 Season Poster">
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="specs-panel reveal">
+              <h4>SYS_SPECS // 2024-2025</h4>
+              <div class="spec-row">
+                <div class="spec-label">Design Goals</div>
+                <div class="spec-val">A light, maneuverable, and relatively inexpensive ROV focused on increasing
+                  reliability, usability, and efficiency. We used rapid prototyping and iterative design to expand on
+                  previous designs while adding new tools to increase our potential workload.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Propulsion</div>
+                <div class="spec-val">Four Blue Robotics T200 thrusters arranged with two facing upward and two facing
+                  forward. This layout was selected for flexibility, balance, ease of control, and efficient use of
+                  space, while keeping the center of thrust close to the center of mass. The ROV was designed to be
+                  slightly positively buoyant for additional safety.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Attachments</div>
+                <div class="spec-val">A robust 3D-printed interlocking claw designed to grab PVC pipes between ½ and 2
+                  inches as well as loops of wire or plastic. Two servos with a 2:1 gear ratio provide increased torque,
+                  while double helical gears reduce backlash and gear slippage. The ROV also features a peristaltic
+                  water-sample pump driven by a Blue Robotics T-100 motor.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Electronics</div>
+                <div class="spec-val">An acrylic enclosure houses the Raspberry Pi, cameras, ESCs, buck converter, and
+                  Arduino. The ROV uses five tether connections, including three power lines, Ethernet for data, and
+                  RS-485 communication. Parallel power conductors help limit voltage drop, while an onboard
+                  strain-relief hub protects the cables and structure.
+                </div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Software</div>
+                <div class="spec-val">A modular control system built around four custom software libraries: Leviathan,
+                  Seaglide, Snowfox, and Spinefish. Leviathan acts as the central control system, Snowfox handles camera
+                  data, Spinefish manages motor and servo control, and Seaglide controls the float. The separated
+                  architecture improved robustness and error resistance while reducing network latency and increasing
+                  available bandwidth.</div>
+              </div>
+              <div class="spec-actions">
+                <a class="btn btn-secondary" href="https://github.com/mamorobotics/Leviathan" target="_blank"
+                  rel="noopener noreferrer">Access GitHub repo</a>
+                <a class="btn btn-secondary" href="files/MamaroneckTigerSharksTechReport202425.pdf" download
+                  target="_blank" rel="noopener noreferrer">Download tech
+                  report</a>
+              </div>
+              <div class="recognition reveal">
+                <div class="spec-label" style="width:100%;margin-bottom:6px;">[Pennsylvania Regional]</div>
+                <span>Creative Design Award</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- GALLERY (masonry flow, no filters, clear placeholders) -->
+    <section class="page" id="page-gallery">
+      <div class="program-header" style="border-bottom:none;padding-bottom:0;">
+        <h1 style="font-size:40px;">FIELD NOTES // GALLERY</h1>
+        <p class="lead">Visual records of engineering and operations. High-fidelity field documentation.</p>
+      </div>
+      <div class="section" style="padding-top:32px;border-bottom:none;">
+        <div class="gallery-grid" id="galleryGrid">
+          <div class="gallery-item reveal">
+            <div class="gallery-photo h-tall">[ INSERT WORKSHOP PHOTO ]</div>
+            <div class="gallery-caption"><span class="tag">WORKSHOP // CHASSIS</span>
+              <h3>FTC Drivetrain Assembly</h3>
+            </div>
+          </div>
+          <div class="gallery-item reveal">
+            <div class="gallery-photo h-standard">[ INSERT TEAM PHOTO ]</div>
+            <div class="gallery-caption"><span class="tag">COMPETITIONS // FTC</span>
+              <h3>Regional Qualifiers Match 12</h3>
+            </div>
+          </div>
+          <div class="gallery-item reveal">
+            <div class="gallery-photo h-wide">[ INSERT ROV PHOTO ]</div>
+            <div class="gallery-caption"><span class="tag">ROBOTS // AQUATIC</span>
+              <h3>Initial ROV Buoyancy Checks</h3>
+            </div>
+          </div>
+          <div class="gallery-item reveal">
+            <div class="gallery-photo h-square">[ INSERT WIRING PHOTO ]</div>
+            <div class="gallery-caption"><span class="tag">ROBOTS // ELECTRONICS</span>
+              <h3>Power Distribution Wiring</h3>
+            </div>
+          </div>
+          <div class="gallery-item reveal">
+            <div class="gallery-photo h-standard">[ INSERT BUILD PHOTO ]</div>
+            <div class="gallery-caption"><span class="tag">WORKSHOP // BUILD</span>
+              <h3>Chassis Fabrication Night</h3>
+            </div>
+          </div>
+          <div class="gallery-item reveal">
+            <div class="gallery-photo h-tall">[ INSERT PIT PHOTO ]</div>
+            <div class="gallery-caption"><span class="tag">COMPETITIONS // PIT</span>
+              <h3>Pit Crew Prep</h3>
+            </div>
+          </div>
+          <div class="gallery-item reveal">
+            <div class="gallery-photo h-panorama">[ INSERT FIELD PHOTO ]</div>
+            <div class="gallery-caption"><span class="tag">COMPETITIONS // FTC</span>
+              <h3>Match Point View</h3>
+            </div>
+          </div>
+          <div class="gallery-item reveal">
+            <div class="gallery-photo h-square">[ INSERT ELECTRONICS PHOTO ]</div>
+            <div class="gallery-caption"><span class="tag">ROBOTS // ELECTRONICS</span>
+              <h3>Control Hub Assembly</h3>
+            </div>
+          </div>
+          <div class="gallery-item reveal">
+            <div class="gallery-photo h-wide">[ INSERT ROV DECK PHOTO ]</div>
+            <div class="gallery-caption"><span class="tag">ROBOTS // AQUATIC</span>
+              <h3>ROV Deck Testing</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="page" id="page-contact">
+      <div class="program-header" style="border-bottom:none;padding-bottom:0;">
+        <h1 style="font-size:40px;">CONTACT</h1>
+        <p class="lead">Reach out for inquiries, collaborations, or support.</p>
+      </div>
+
+      <div class="section" style="border-bottom:none;padding-top:32px;">
+        <div class="contact-info-grid">
+          <div class="card reveal">
+            <div>
+              <span class="tag">TEAM INBOX</span>
+              <h3>Email Us</h3>
+            </div>
+            <a class="mono" href="mailto:Hugh.a.scobie@gmail.com">Hugh.a.scobie@gmail.com</a>
+          </div>
+
+          <div class="card reveal">
+            <div>
+              <span class="tag">SOCIAL</span>
+              <h3>Instagram</h3>
+            </div>
+            <a class="mono" href="#" onclick="return false;">@mamk_robotics</a>
+          </div>
+          <div class="card reveal">
+            <div>
+              <span class="tag">CODE</span>
+              <h3>GitHub</h3>
+            </div>
+            <a class="mono" href="#" onclick="return false;">github.com/mamaroneck-robotics</a>
+          </div>
+        </div>
+
+        <div class="sponsor-banner reveal">
+          <div class="sponsor-text">
+            <span class="tag">SPONSORSHIP</span>
+            <h2>Support Mamaroneck Robotics</h2>
+            <p>Sponsorship funds competition registration, materials, and travel for our student engineers. Every
+              contribution directly builds the next season's robot.</p>
+          </div>
+          <a class="btn" href="mailto:Hugh.a.scobie@gmail.com?subject=Sponsorship%20Inquiry">Become a
+            sponsor</a>
+        </div>
+      </div>
+
+      <div class="section" style="border-bottom:none;padding-top:32px;">
+        <div class="reveal">
+          <span class="tag">PARTNERS</span>
+          <h2 style="margin-top:8px;">Our Sponsors</h2>
+          <p class="lead" style="margin-bottom:24px;">We're grateful for the organizations that make our work possible.
+          </p>
+        </div>
+        <div class="sponsors-grid reveal">
+          <a class="sponsor-logo-card" href="https://www.acehardware.com/store-details/18894" target="_blank"
+            rel="noopener noreferrer"><img src="sponsors/sponsor1.png" alt=""></a>
+          <a class="sponsor-logo-card" href="https://www.makeinspires.com/" target="_blank"
+            rel="noopener noreferrer"><img src="sponsors/sponsor2.png" alt=""></a>
+          <a class="sponsor-logo-card" href="https://mcmichaelyachtbrokers.com/" target="_blank"
+            rel="noopener noreferrer"><img src="sponsors/sponsor3.png" alt=""></a>
+          <a class="sponsor-logo-card" href="https://www.wsp.com/en-us/" target="_blank" rel="noopener noreferrer"><img
+              src="sponsors/sponsor4.png" alt=""></a>
+          <a class="sponsor-logo-card" href="https://www.deciccoandsons.com/" target="_blank"
+            rel="noopener noreferrer"><img src="sponsors/sponsor5.png" alt=""></a>
+          <!--<a class="sponsor-logo-card" href="#" target="_blank" rel="noopener noreferrer"><img
+              src="sponsors/sponsor6.png" alt=""></a>
+          <a class="sponsor-logo-card" href="#" target="_blank" rel="noopener noreferrer"><img
+              src="sponsors/sponsor7.png" alt=""></a>
+          <a class="sponsor-logo-card" href="#" target="_blank" rel="noopener noreferrer"><img
+              src="sponsors/sponsor8.png" alt=""></a>-->
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="wrap">
+    <div class="footer-row">
+      <div class="foot-note">© 2026 MAMARONECK ROBOTICS // ALL SYSTEMS OPERATIONAL</div>
+      <div class="footer-links">
+        <a href="#" onclick="return false;">GITHUB_SOURCE</a>
+        <a href="https://www.mamkschools.org" target="_blank" rel="noopener noreferrer">SCHOOL_DISTRICT</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
