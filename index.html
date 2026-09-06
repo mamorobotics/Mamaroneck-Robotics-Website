@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mamaroneck Robotics // Team 8490</title>
+  <base href="./">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -16,33 +17,37 @@
 
 <body>
 
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <header>
     <div class="wrap navbar">
       <div class="brand">MAMARONECK ROBOTICS</div>
       <nav class="desktop-nav" id="desktopNav">
-        <a data-page="home" class="active">Dashboard</a>
-        <a data-page="ftc">FTC Program</a>
-        <a data-page="rov">MATE ROV</a>
-        <a data-page="gallery">Gallery</a>
-        <a data-page="contact">Contact</a>
+        <a href="./" data-page="home" class="active">Dashboard</a>
+        <a href="ftc" data-page="ftc">FTC Program</a>
+        <a href="rov" data-page="rov">MATE ROV</a>
+        <a href="gallery" data-page="gallery">Gallery</a>
+        <a href="contact" data-page="contact">Contact</a>
       </nav>
       <div class="nav-right">
-        <button class="theme-toggle" id="themeToggle" title="Toggle theme">Dark</button>
-        <button class="hamburger" id="hamburgerBtn" title="Menu">
+        <button class="theme-toggle" id="themeToggle" type="button" title="Toggle theme"
+          aria-label="Toggle color theme">Dark</button>
+        <button class="hamburger" id="hamburgerBtn" type="button" title="Menu" aria-label="Open navigation menu"
+          aria-controls="mobileMenu" aria-expanded="false">
           <span class="hamburger-lines"><span></span><span></span><span></span></span>
         </button>
       </div>
     </div>
     <div class="mobile-menu" id="mobileMenu">
-      <a data-page="home" class="active">Dashboard</a>
-      <a data-page="ftc">FTC Program</a>
-      <a data-page="rov">MATE ROV</a>
-      <a data-page="gallery">Gallery</a>
-      <a data-page="contact">Contact</a>
+      <a href="./" data-page="home" class="active">Dashboard</a>
+      <a href="ftc" data-page="ftc">FTC Program</a>
+      <a href="rov" data-page="rov">MATE ROV</a>
+      <a href="gallery" data-page="gallery">Gallery</a>
+      <a href="contact" data-page="contact">Contact</a>
     </div>
   </header>
 
-  <main class="wrap">
+  <main class="wrap" id="main-content">
 
     <!-- HOME -->
     <section class="page active" id="page-home">
@@ -55,8 +60,8 @@
               teams in multiple engineering disciplines, focusing on robust mechanical design, advanced control systems,
               and comprehensive technical documentation.</p>
             <div class="btn-row">
-              <a class="btn btn-primary" data-page="ftc">FTC 8490</a>
-              <a class="btn btn-secondary" data-page="rov">MATE ROV Tigersharks</a>
+              <a class="btn btn-primary" href="ftc" data-page="ftc">FTC 8490</a>
+              <a class="btn btn-secondary" href="rov" data-page="rov">MATE ROV Tigersharks</a>
             </div>
             <div class="hero-meta">SYS.STATUS: ONLINE · LAT: 40°56'30.5" N · LON: 73°44'40.2" W</div>
           </div>
@@ -76,14 +81,14 @@
             <h3>First Tech Challenge</h3>
             <p>Team 8490 conceptualizes, CADs, fabricates, and programs 18"×18" aluminum-chassis robots for intense 2v2
               arena matches.</p>
-            <a class="btn-ghost" data-page="ftc">Access specs →</a>
+            <a class="btn-ghost" href="ftc" data-page="ftc">Access specs →</a>
           </div>
           <div class="card reveal">
             <span class="tag">WATER</span>
             <h3>MATE ROV Competition</h3>
             <p>The Tigersharks engineer advanced underwater remotely operated vehicles (ROVs) to complete complex
               simulated marine industrial tasks.</p>
-            <a class="btn-ghost" data-page="rov">Access specs →</a>
+            <a class="btn-ghost" href="rov" data-page="rov">Access specs →</a>
           </div>
         </div>
       </div>
@@ -227,7 +232,7 @@
         </div>
       </div>
 
-      <div class="season-block" style="border-bottom:none;">
+        <div class="season-block" style="border-bottom:none;">
         <div class="eyebrow">SEASON_01</div>
         <div class="season-header">
           <h2 style="margin-bottom:0;">FTC // INTO THE DEEP</h2>
@@ -376,7 +381,6 @@
           </div>
         </div>
       </div>
-      </div>
 
       <div class="season-block" style="border-bottom:none;">
         <div class="eyebrow">SEASON_01</div>
@@ -451,6 +455,7 @@
             </div>
           </div>
         </div>
+      </div>
     </section>
 
     <!-- GALLERY (masonry flow, no filters, clear placeholders) -->
@@ -583,15 +588,15 @@
         </div>
         <div class="sponsors-grid reveal">
           <a class="sponsor-logo-card" href="https://www.acehardware.com/store-details/18894" target="_blank"
-            rel="noopener noreferrer"><img src="sponsors/sponsor1.png" alt=""></a>
+            rel="noopener noreferrer"><img src="sponsors/sponsor1.png" alt="Ace Hardware sponsor logo"></a>
           <a class="sponsor-logo-card" href="https://www.makeinspires.com/" target="_blank"
-            rel="noopener noreferrer"><img src="sponsors/sponsor2.png" alt=""></a>
+            rel="noopener noreferrer"><img src="sponsors/sponsor2.png" alt="Make Inspires sponsor logo"></a>
           <a class="sponsor-logo-card" href="https://mcmichaelyachtbrokers.com/" target="_blank"
-            rel="noopener noreferrer"><img src="sponsors/sponsor3.png" alt=""></a>
+            rel="noopener noreferrer"><img src="sponsors/sponsor3.png" alt="McMichael Yacht Brokers sponsor logo"></a>
           <a class="sponsor-logo-card" href="https://www.wsp.com/en-us/" target="_blank" rel="noopener noreferrer"><img
-              src="sponsors/sponsor4.png" alt=""></a>
+              src="sponsors/sponsor4.png" alt="WSP sponsor logo"></a>
           <a class="sponsor-logo-card" href="https://www.deciccoandsons.com/" target="_blank"
-            rel="noopener noreferrer"><img src="sponsors/sponsor5.png" alt=""></a>
+            rel="noopener noreferrer"><img src="sponsors/sponsor5.png" alt="DeCicco & Sons sponsor logo"></a>
           <!--<a class="sponsor-logo-card" href="#" target="_blank" rel="noopener noreferrer"><img
               src="sponsors/sponsor6.png" alt=""></a>
           <a class="sponsor-logo-card" href="#" target="_blank" rel="noopener noreferrer"><img

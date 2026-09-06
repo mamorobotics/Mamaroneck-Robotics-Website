@@ -9,6 +9,15 @@ const pages = document.querySelectorAll('.page');
 const lightbox = document.getElementById('imageLightbox');
 const lightboxImage = document.getElementById('lightboxImage');
 const lightboxClose = document.getElementById('lightboxClose');
+const siteRoot = new URL('./', document.baseURI).pathname.replace(/\/$/, '');
+const pagePaths = {
+  home: siteRoot || '/',
+  ftc: `${siteRoot}/ftc`,
+  rov: `${siteRoot}/rov`,
+  gallery: `${siteRoot}/gallery`,
+  contact: `${siteRoot}/contact`
+};
+const pathPages = Object.fromEntries(Object.entries(pagePaths).map(([id, path]) => [path, id]));
 
 function initReveal(root){
   const items = root.querySelectorAll('.reveal');
@@ -23,12 +32,27 @@ function initReveal(root){
   items.forEach(item => obs.observe(item));
 }
 
-function goToPage(id){
+function getPageIdFromLocation(){
+  const path = window.location.pathname.replace(/\/+$/, '') || '/';
+  if(pathPages[path]) return pathPages[path];
+
+  const hash = window.location.hash.replace(/^#/, '');
+  return document.getElementById('page-' + hash) ? hash : 'home';
+}
+
+function goToPage(id, {updateHistory = true} = {}){
+  if(!pagePaths[id]) id = 'home';
   pages.forEach(p => p.classList.toggle('active', p.id === 'page-' + id));
-  document.querySelectorAll('nav a, .mobile-menu a').forEach(a => a.classList.toggle('active', a.dataset.page === id));
+  document.querySelectorAll('nav a, .mobile-menu a').forEach(a => {
+    const isActive = a.dataset.page === id;
+    a.classList.toggle('active', isActive);
+    if(isActive) a.setAttribute('aria-current', 'page');
+    else a.removeAttribute('aria-current');
+  });
   document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('hamburgerBtn').setAttribute('aria-expanded', 'false');
   window.scrollTo({top:0,behavior:'smooth'});
-  history.replaceState(null, '', '#' + id);
+  if(updateHistory) history.pushState(null, '', pagePaths[id]);
   const activePage = document.getElementById('page-' + id);
   if(activePage) initReveal(activePage);
 }
@@ -41,17 +65,23 @@ navLinks.forEach(link => {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-  const initial = (location.hash || '#home').replace('#','');
-  if(document.getElementById('page-' + initial)) {
-    goToPage(initial);
-  } else {
-    initReveal(document.getElementById('page-home'));
-  }
+  const initial = getPageIdFromLocation();
+  const currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
+  const hasLegacyHash = Boolean(window.location.hash);
+  const needsCanonicalPath = hasLegacyHash || !pathPages[currentPath];
+  if(needsCanonicalPath) history.replaceState(null, '', pagePaths[initial]);
+  goToPage(initial, {updateHistory: false});
+});
+
+window.addEventListener('popstate', () => {
+  goToPage(getPageIdFromLocation(), {updateHistory: false});
 });
 
 // ---------- Mobile menu ----------
 document.getElementById('hamburgerBtn').addEventListener('click', () => {
-  document.getElementById('mobileMenu').classList.toggle('open');
+  const menu = document.getElementById('mobileMenu');
+  const isOpen = menu.classList.toggle('open');
+  document.getElementById('hamburgerBtn').setAttribute('aria-expanded', String(isOpen));
 });
 
 // ---------- Theme toggle (text-based, no icon dependency) ----------

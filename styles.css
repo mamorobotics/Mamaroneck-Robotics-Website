@@ -45,6 +45,23 @@ html[data-theme="light"] {
   padding: 0;
 }
 
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 200;
+  padding: 10px 14px;
+  background: var(--bg-panel);
+  border: 1px solid var(--primary);
+  color: var(--text-hi);
+  transform: translateY(-150%);
+  transition: transform .2s var(--ease);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -779,6 +796,12 @@ p.lead {
 
 .render-box img:hover {
   transform: scale(1.03);
+}
+
+.render-box img:focus-visible,
+.lightbox-close:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
 }
 
 .image-lightbox {
