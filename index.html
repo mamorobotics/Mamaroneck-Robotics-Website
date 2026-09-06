@@ -18,7 +18,7 @@
 
   <header>
     <div class="wrap navbar">
-      <div class="brand"><span class="brand-dot"></span>MAMARONECK ROBOTICS</div>
+      <div class="brand">MAMARONECK ROBOTICS</div>
       <nav class="desktop-nav" id="desktopNav">
         <a data-page="home" class="active">Dashboard</a>
         <a data-page="ftc">FTC Program</a>
@@ -49,7 +49,7 @@
       <div class="hero">
         <div class="hero-grid">
           <div>
-            <div class="eyebrow"><span class="status-dot"></span>MAMARONECK HIGH SCHOOL // ROBOTICS</div>
+            <div class="eyebrow">MAMARONECK HIGH SCHOOL // ROBOTICS</div>
             <h1>MAMARONECK ROBOTICS</h1>
             <p class="lead">Engineering precision. Building future leaders. Mamaroneck Robotics fields elite competitive
               teams in multiple engineering disciplines, focusing on robust mechanical design, advanced control systems,
@@ -102,27 +102,42 @@
                 We work together to problem solve and deliver competition-ready robots on strict deadlines</p>
             </div>
 
-            <div class="reveal" style="margin-top:40px;">
+            <div class="reveal" style="margin-top:28px;">
               <div class="eyebrow">DIV.03 // METHODOLOGY</div>
               <h2>THE PROCESS</h2>
             </div>
             <div class="process-stack">
               <div class="process-card reveal">
-                <div class="process-num">01</div>
-                <h3>Design</h3>
+                <div class="process-header">
+                  <span class="process-num">01</span>
+                  <h3>Brainstorming</h3>
+                </div>
+                <p style="color:var(--text-mid);font-size:14px;">Collaborative ideation, game challenge analysis, and
+                  conceptual sketching. Evaluating strategic priorities and weighing trade-offs to define robot
+                  requirements before prototyping.</p>
+              </div>
+              <div class="process-card reveal">
+                <div class="process-header">
+                  <span class="process-num">02</span>
+                  <h3>Design</h3>
+                </div>
                 <p style="color:var(--text-mid);font-size:14px;">Iterative CAD modeling using industry-standard
                   software (Autodesk Fusion). Comprehensive prototyping and structural analysis before anything is
                   manufactured.</p>
               </div>
               <div class="process-card reveal">
-                <div class="process-num">02</div>
-                <h3>Build</h3>
+                <div class="process-header">
+                  <span class="process-num">03</span>
+                  <h3>Build</h3>
+                </div>
                 <p style="color:var(--text-mid);font-size:14px;">Precision fabrication utilizing CNC routing, 3D
                   printing, and lasercutting.</p>
               </div>
               <div class="process-card reveal">
-                <div class="process-num">03</div>
-                <h3>Coding</h3>
+                <div class="process-header">
+                  <span class="process-num">04</span>
+                  <h3>Coding</h3>
+                </div>
                 <p style="color:var(--text-mid);font-size:14px;">Iterative software development utilizing structured
                   programming and testing.
                   Building reliable autonomous routines through modular code, debugging, simulation, and continuous
@@ -581,6 +596,11 @@
     </section>
 
   </main>
+
+  <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close enlarged image">×</button>
+    <img id="lightboxImage" src="" alt="">
+  </div>
 
   <footer class="wrap">
     <div class="footer-row">

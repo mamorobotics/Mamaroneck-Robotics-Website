@@ -6,6 +6,9 @@
 
 const navLinks = document.querySelectorAll('[data-page]');
 const pages = document.querySelectorAll('.page');
+const lightbox = document.getElementById('imageLightbox');
+const lightboxImage = document.getElementById('lightboxImage');
+const lightboxClose = document.getElementById('lightboxClose');
 
 function initReveal(root){
   const items = root.querySelectorAll('.reveal');
@@ -62,6 +65,39 @@ applyTheme(localStorage.getItem('mr-theme') || 'dark');
 themeBtn.addEventListener('click', () => {
   const cur = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
   applyTheme(cur);
+});
+
+// ---------- FTC / MATE image lightbox ----------
+function closeLightbox(){
+  lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  lightboxImage.src = '';
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.render-box img').forEach(image => {
+  image.tabIndex = 0;
+  image.addEventListener('click', () => {
+    lightboxImage.src = image.src;
+    lightboxImage.alt = image.alt;
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  });
+  image.addEventListener('keydown', event => {
+    if(event.key === 'Enter' || event.key === ' '){
+      event.preventDefault();
+      image.click();
+    }
+  });
+});
+
+lightboxClose.addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', event => {
+  if(event.target === lightbox) closeLightbox();
+});
+document.addEventListener('keydown', event => {
+  if(event.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
 });
 
 // ---------- Contact form ----------
