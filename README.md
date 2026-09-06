@@ -4,4 +4,4 @@ This is a new and improved website for the Mamaroneck Robotics Team that partici
 
 Google Stitch (stitch.withgoogle.com) was used for the design.
 
-Claude (claude.ai) and Gemini (gemini.google.com) was used for the coding.
+Claude (claude.ai) and Gemini (gemini.google.com) were used for the coding.
