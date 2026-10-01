@@ -33,8 +33,11 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Add SPA fallback
-        run: cp index.html 404.html
+      - name: Add SPA routes and fallback
+        # Pages serves /ftc from ftc.html with a 200 status; 404.html catches anything else.
+        run: |
+          for page in ftc rov gallery contact; do cp index.html "$page.html"; done
+          cp index.html 404.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

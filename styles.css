@@ -15,6 +15,7 @@
   --border-hi: rgba(242, 103, 33, 0.55);
   --primary: #f26721;
   --primary-dim: #ffb597;
+  --primary-text: #f26721;
   --on-primary: #0a0a0a;
   --tertiary: #4db8ff;
   --success: #3ecf66;
@@ -37,6 +38,11 @@ html[data-theme="light"] {
   --border-subtle: rgba(0, 0, 0, 0.10);
   --border-hi: rgba(242, 103, 33, 0.55);
   --on-primary: #ffffff;
+  /* Darker accents so small text meets WCAG AA contrast on light backgrounds */
+  --primary-text: #c2410c;
+  --primary-dim: #c2410c;
+  --tertiary: #0b6bb0;
+  --success: #15803d;
 }
 
 * {
@@ -189,7 +195,7 @@ nav.desktop-nav a:hover {
 }
 
 nav.desktop-nav a.active {
-  color: var(--primary);
+  color: var(--primary-text);
 }
 
 nav.desktop-nav a.active::after,
@@ -304,7 +310,7 @@ nav.desktop-nav a:hover::after {
 
 .mobile-menu a.active,
 .mobile-menu a:hover {
-  color: var(--primary);
+  color: var(--primary-text);
 }
 
 /* ---------- PAGE TRANSITIONS ---------- */
@@ -333,13 +339,13 @@ main section.page.active {
   }
 }
 
-.reveal {
+.js .reveal {
   opacity: 0;
   transform: translateY(18px);
   transition: opacity .6s var(--ease), transform .6s var(--ease);
 }
 
-.reveal.in {
+.js .reveal.in {
   opacity: 1;
   transform: translateY(0);
 }
@@ -349,7 +355,7 @@ main section.page.active {
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--primary);
+  color: var(--primary-text);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -537,6 +543,13 @@ p.lead {
   border-radius: calc(var(--radius-lg) - 4px);
 }
 
+.hero-logo {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  margin: 0 auto;
+}
+
 .hero-meta {
   margin-top: 14px;
   font-family: var(--font-mono);
@@ -595,7 +608,7 @@ p.lead {
   padding: 26px;
 }
 
-.card .tag {
+.tag {
   font-family: var(--font-mono);
   font-size: 10px;
   text-transform: uppercase;
@@ -865,7 +878,7 @@ p.lead {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--primary);
+  color: var(--primary-text);
   margin-bottom: 20px;
 }
 
@@ -947,7 +960,7 @@ p.lead {
 
 .construction-mark {
   border: 1px solid var(--primary);
-  color: var(--primary);
+  color: var(--primary-text);
   font-family: var(--font-mono);
   font-size: 12px;
   font-weight: 700;
@@ -1159,7 +1172,7 @@ p.lead {
 }
 
 .sponsor-logo-card {
-  background: var(--surface);
+  background: var(--bg-panel);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   padding: 14px;

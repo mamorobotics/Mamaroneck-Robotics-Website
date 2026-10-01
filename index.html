@@ -5,7 +5,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mamaroneck Robotics // Team 8490</title>
+  <meta name="description"
+    content="Mamaroneck Robotics is the student-led robotics program at Mamaroneck High School, home of FTC Team 8490 and the MATE ROV Tigersharks.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mamaroneck Robotics">
+  <meta property="og:title" content="Mamaroneck Robotics // Team 8490">
+  <meta property="og:description"
+    content="Student-led robotics at Mamaroneck High School: FTC Team 8490 and the MATE ROV Tigersharks.">
+  <meta property="og:url" content="https://mamorobotics.github.io/Mamaroneck-Robotics-Website/">
+  <meta property="og:image" content="https://mamorobotics.github.io/Mamaroneck-Robotics-Website/images/TEAMPHOTO.webp">
+  <meta name="twitter:card" content="summary_large_image">
   <base href="./">
+  <script>
+    // Runs before first paint: drop a trailing slash on sub-pages (it breaks the
+    // relative <base>), apply the saved/system theme, and flag that JS is on.
+    (function () {
+      var path = location.pathname;
+      if (/\/(ftc|rov|gallery|contact)\/$/.test(path)) {
+        location.replace(path.replace(/\/$/, '') + location.search + location.hash);
+      }
+      var theme;
+      try { theme = localStorage.getItem('mr-theme'); } catch (e) { }
+      if (theme !== 'light' && theme !== 'dark') {
+        theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.classList.add('js');
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -21,7 +48,7 @@
 
   <header>
     <div class="wrap navbar">
-      <div class="brand">MAMARONECK ROBOTICS</div>
+      <a class="brand" href="./" data-page="home">MAMARONECK ROBOTICS</a>
       <nav class="desktop-nav" id="desktopNav">
         <a href="./" data-page="home" class="active">Dashboard</a>
         <a href="ftc" data-page="ftc">FTC Program</a>
@@ -66,8 +93,8 @@
             <div class="hero-meta">SYS.STATUS: ONLINE · LAT: 40°56'30.5" N · LON: 73°44'40.2" W</div>
           </div>
           <div>
-            <img src="images/TIGERLOGO.png" alt="Mamaroneck Robotics Logo"
-              style="max-width:280px; height:auto; margin-left:60px;">
+            <img class="hero-logo" src="images/TIGERLOGO.png" width="636" height="735"
+              alt="Mamaroneck Robotics Logo">
           </div>
         </div>
       </div>
@@ -104,7 +131,7 @@
                 functional
                 autonomous robots, every component is designed, manufactured, iterated, and coded by high school
                 students.
-                We work together to problem solve and deliver competition-ready robots on strict deadlines</p>
+                We work together to problem solve and deliver competition-ready robots on strict deadlines.</p>
             </div>
 
             <div class="reveal" style="margin-top:28px;">
@@ -153,7 +180,7 @@
           </div><!-- closes team-process-col -->
 
           <div class="photo-box-tall reveal">
-            <img src="images/TEAMPHOTO.png" alt="Mamaroneck Robotics team at MHS Engineering Lab">
+            <img src="images/TEAMPHOTO.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Mamaroneck Robotics team at MHS Engineering Lab">
           </div>
         </div><!-- closes team-process-grid -->
       </div><!-- closes section -->
@@ -182,10 +209,10 @@
           <div>
             <div class="render-pair">
               <div class="render-box reveal">
-                <img src="images/FTC2526.PNG" alt="FTC 2025-2026 Robot">
+                <img src="images/FTC2526.webp" width="1600" height="1600" loading="lazy" decoding="async" alt="FTC 2025-2026 Robot">
               </div>
               <div class="render-box reveal">
-                <img src="images/FTC2526POSTER.png" alt="FTC 2025-2026 Season Poster">
+                <img src="images/FTC2526POSTER.webp" width="1600" height="1445" loading="lazy" decoding="async" alt="FTC 2025-2026 Season Poster">
               </div>
             </div>
           </div>
@@ -202,7 +229,7 @@
               <div class="spec-row">
                 <div class="spec-label">Drivetrain</div>
                 <div class="spec-val">GoBilda Strafer chassis as our base, with 96mm mecanum wheels and 5203 planetary
-                  gear series Yellow Jacket motors using a 19.2:1 gear ratio and 312 RPM..</div>
+                  gear series Yellow Jacket motors using a 19.2:1 gear ratio and 312 RPM.</div>
               </div>
               <div class="spec-row">
                 <div class="spec-label">Mechanisms</div>
@@ -232,7 +259,7 @@
         </div>
       </div>
 
-        <div class="season-block" style="border-bottom:none;">
+      <div class="season-block" style="border-bottom:none;">
         <div class="eyebrow">SEASON_01</div>
         <div class="season-header">
           <h2 style="margin-bottom:0;">FTC // INTO THE DEEP</h2>
@@ -245,10 +272,10 @@
           <div>
             <div class="render-pair">
               <div class="render-box reveal">
-                <img src="images/FTC2425.PNG" alt="FTC 2024-2025 Robot">
+                <img src="images/FTC2425.webp" width="1600" height="1600" loading="lazy" decoding="async" alt="FTC 2024-2025 Robot">
               </div>
               <div class="render-box reveal">
-                <img src="images/FTC2425POSTER.png" alt="FTC 2024-2025 Season Poster">
+                <img src="images/FTC2425POSTER.webp" width="1600" height="1445" loading="lazy" decoding="async" alt="FTC 2024-2025 Season Poster">
               </div>
             </div>
           </div>
@@ -290,7 +317,7 @@
               </div>
             </div>
             <div class="recognition reveal">
-              <div class="spec-label" style="width:100%;margin-bottom:6px;">[Peekskill Qualifier</div>
+              <div class="spec-label" style="width:100%;margin-bottom:6px;">[Peekskill Qualifier]</div>
             </div>
           </div>
         </div>
@@ -320,10 +347,10 @@
           <div>
             <div class="render-pair">
               <div class="render-box reveal">
-                <img src="images/ROV2526.PNG" alt="ROV 2025-2026 Robot">
+                <img src="images/ROV2526.webp" width="1600" height="1600" loading="lazy" decoding="async" alt="ROV 2025-2026 Robot">
               </div>
               <div class="render-box reveal">
-                <img src="images/ROV2526POSTER.png" alt="ROV 2025-2026 Season Poster">
+                <img src="images/ROV2526POSTER.webp" width="1216" height="1600" loading="lazy" decoding="async" alt="ROV 2025-2026 Season Poster">
               </div>
             </div>
           </div>
@@ -395,10 +422,10 @@
           <div>
             <div class="render-pair">
               <div class="render-box reveal">
-                <img src="images/ROV2425.PNG" alt="ROV 2024-2025 Robot">
+                <img src="images/ROV2425.webp" width="1600" height="1600" loading="lazy" decoding="async" alt="ROV 2024-2025 Robot">
               </div>
               <div class="render-box reveal">
-                <img src="images/ROV2425POSTER.png" alt="ROV 2024-2025 Season Poster">
+                <img src="images/ROV2425POSTER.webp" width="1216" height="1600" loading="lazy" decoding="async" alt="ROV 2024-2025 Season Poster">
               </div>
             </div>
           </div>
@@ -448,10 +475,10 @@
                   target="_blank" rel="noopener noreferrer">Download tech
                   report</a>
               </div>
-              <div class="recognition reveal">
-                <div class="spec-label" style="width:100%;margin-bottom:6px;">[Pennsylvania Regional]</div>
-                <span>Creative Design Award</span>
-              </div>
+            </div>
+            <div class="recognition reveal">
+              <div class="spec-label" style="width:100%;margin-bottom:6px;">[Pennsylvania Regional]</div>
+              <span>Creative Design Award</span>
             </div>
           </div>
         </div>
@@ -588,21 +615,21 @@
         </div>
         <div class="sponsors-grid reveal">
           <a class="sponsor-logo-card" href="https://www.acehardware.com/store-details/18894" target="_blank"
-            rel="noopener noreferrer"><img src="sponsors/sponsor1.png" alt="Ace Hardware sponsor logo"></a>
+            rel="noopener noreferrer"><img src="sponsors/sponsor1.png" loading="lazy" alt="Ace Hardware sponsor logo"></a>
           <a class="sponsor-logo-card" href="https://www.makeinspires.com/" target="_blank"
-            rel="noopener noreferrer"><img src="sponsors/sponsor2.png" alt="Make Inspires sponsor logo"></a>
+            rel="noopener noreferrer"><img src="sponsors/sponsor2.png" loading="lazy" alt="Make Inspires sponsor logo"></a>
           <a class="sponsor-logo-card" href="https://mcmichaelyachtbrokers.com/" target="_blank"
-            rel="noopener noreferrer"><img src="sponsors/sponsor3.png" alt="McMichael Yacht Brokers sponsor logo"></a>
+            rel="noopener noreferrer"><img src="sponsors/sponsor3.png" loading="lazy" alt="McMichael Yacht Brokers sponsor logo"></a>
           <a class="sponsor-logo-card" href="https://www.wsp.com/en-us/" target="_blank" rel="noopener noreferrer"><img
-              src="sponsors/sponsor4.png" alt="WSP sponsor logo"></a>
+              src="sponsors/sponsor4.png" loading="lazy" alt="WSP sponsor logo"></a>
           <a class="sponsor-logo-card" href="https://www.deciccoandsons.com/" target="_blank"
-            rel="noopener noreferrer"><img src="sponsors/sponsor5.png" alt="DeCicco & Sons sponsor logo"></a>
+            rel="noopener noreferrer"><img src="sponsors/sponsor5.png" loading="lazy" alt="DeCicco & Sons sponsor logo"></a>
           <!--<a class="sponsor-logo-card" href="#" target="_blank" rel="noopener noreferrer"><img
-              src="sponsors/sponsor6.png" alt=""></a>
+              src="sponsors/sponsor6.png" loading="lazy" alt=""></a>
           <a class="sponsor-logo-card" href="#" target="_blank" rel="noopener noreferrer"><img
-              src="sponsors/sponsor7.png" alt=""></a>
+              src="sponsors/sponsor7.png" loading="lazy" alt=""></a>
           <a class="sponsor-logo-card" href="#" target="_blank" rel="noopener noreferrer"><img
-              src="sponsors/sponsor8.png" alt=""></a>-->
+              src="sponsors/sponsor8.png" loading="lazy" alt=""></a>-->
         </div>
       </div>
 
@@ -610,9 +637,10 @@
 
   </main>
 
-  <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+  <div class="image-lightbox" id="imageLightbox" role="dialog" aria-modal="true" aria-label="Enlarged image"
+    aria-hidden="true">
     <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close enlarged image">×</button>
-    <img id="lightboxImage" src="" alt="">
+    <img id="lightboxImage" alt="">
   </div>
 
   <footer class="wrap">
