@@ -1,6 +1,6 @@
 // ===================================================
 // MAMARONECK ROBOTICS — SITE SCRIPT
-// Handles page routing, reveal animations, theme,
+// Handles page routing, theme,
 // and the image lightbox.
 // ===================================================
 
@@ -19,25 +19,12 @@ const pagePaths = {
 };
 const pathPages = Object.fromEntries(Object.entries(pagePaths).map(([id, path]) => [path, id]));
 const pageTitles = {
-  home: 'Mamaroneck Robotics // Team 8490',
-  ftc: 'FTC 8490 // Mamaroneck Robotics',
-  rov: 'Tigersharks ROV // Mamaroneck Robotics',
-  gallery: 'Gallery // Mamaroneck Robotics',
-  contact: 'Contact // Mamaroneck Robotics'
+  home: 'Mamaroneck Robotics | FTC 8490 & MATE ROV',
+  ftc: 'FTC 8490 | Mamaroneck Robotics',
+  rov: 'Tigersharks ROV | Mamaroneck Robotics',
+  gallery: 'Gallery | Mamaroneck Robotics',
+  contact: 'Contact | Mamaroneck Robotics'
 };
-
-function initReveal(root){
-  const items = root.querySelectorAll('.reveal');
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if(entry.isIntersecting){
-        setTimeout(() => entry.target.classList.add('in'), i * 60);
-        obs.unobserve(entry.target);
-      }
-    });
-  }, {threshold:0.12});
-  items.forEach(item => obs.observe(item));
-}
 
 function getPageIdFromLocation(){
   const path = window.location.pathname.replace(/\/+$/, '') || '/';
@@ -58,11 +45,9 @@ function goToPage(id, {updateHistory = true} = {}){
   });
   document.getElementById('mobileMenu').classList.remove('open');
   document.getElementById('hamburgerBtn').setAttribute('aria-expanded', 'false');
-  window.scrollTo({top:0,behavior:'smooth'});
+  window.scrollTo({top:0,behavior:'instant'});
   if(updateHistory) history.pushState(null, '', pagePaths[id]);
   document.title = pageTitles[id];
-  const activePage = document.getElementById('page-' + id);
-  if(activePage) initReveal(activePage);
 }
 
 navLinks.forEach(link => {
@@ -92,12 +77,12 @@ document.getElementById('hamburgerBtn').addEventListener('click', () => {
   document.getElementById('hamburgerBtn').setAttribute('aria-expanded', String(isOpen));
 });
 
-// ---------- Theme toggle (text-based, no icon dependency) ----------
+// ---------- Theme toggle (sun/moon icons swap via CSS) ----------
 // The initial theme is set by the inline script in <head> to avoid a flash.
 const themeBtn = document.getElementById('themeToggle');
 function applyTheme(t, {save = true} = {}){
   document.documentElement.setAttribute('data-theme', t);
-  themeBtn.textContent = t === 'light' ? 'Light' : 'Dark';
+  themeBtn.setAttribute('aria-label', t === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
   if(save){
     try { localStorage.setItem('mr-theme', t); } catch(e) {}
   }
