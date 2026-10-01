@@ -18,8 +18,8 @@
   --link: #6cc4ff;
   --radius: 6px;
   --radius-lg: 10px;
-  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  --font-body: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
   --max-width: 1200px;
   --ease: cubic-bezier(.4, 0, .2, 1);
 }
@@ -129,9 +129,9 @@ header {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 17px;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.005em;
 }
 
 .brand img {
@@ -290,24 +290,23 @@ main section.page.active {
 /* ---------- TYPE ---------- */
 h1 {
   font-size: 56px;
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-weight: 700;
+  letter-spacing: -0.015em;
   line-height: 1.05;
   margin-bottom: 20px;
 }
 
 h2 {
   font-size: 34px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   line-height: 1.15;
   margin-bottom: 16px;
 }
 
 h3 {
   font-size: 20px;
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  font-weight: 600;
   margin-bottom: 8px;
 }
 
